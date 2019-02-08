@@ -1,0 +1,44 @@
+{% frontVars {
+	preload: 'app'
+} %}
+<!DOCTYPE html>
+<html lang="{{ get('locale') }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1 user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		{# Metatags #}
+		<meta name="description" content="">
+		<meta name="author" content="">
+		{% block meta %}{% endblock %}
+
+		{# Title #}
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="shortcut icon" href="{{ 'favicon.ico'|baseUrl }}">
+
+		{# Link #}
+		{% block link %}
+			<link rel="stylesheet" href="{{ '#styles.css'|url }}">
+		{% endblock %}
+
+		{# Styles #}
+		{% block style %}{% endblock %}
+
+	</head>
+	<body>
+
+		{# Body #}
+		{% block content %}{% endblock %}
+
+		{# JS Framework #}
+		<script type="text/javascript">
+			window._fw = {{ frontConf()|raw }};
+		</script>
+		<script src="{{ '#components.js'|url }}" data-main="{{ '#fw.js'|url }}"></script>
+
+		{# Scripts #}
+		{% block script %}{% endblock %}
+
+	</body>
+</html>

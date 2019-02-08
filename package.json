@@ -1,0 +1,38 @@
+{
+  "name": "fw",
+  "version": "1.0.0",
+  "description": "Voyager Framework",
+  "main": "",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-if": "^2.0.0",
+    "gulp-image": "^1.3.1",
+    "gulp-less": "^3.0.5",
+    "gulp-nunjucks": "^4.0.0",
+    "gulp-order": "^1.1.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.3.0",
+    "gulp-uglify": "^3.0.1",
+    "main-bower-files": "^2.11.1",
+    "mkdirp": "^0.5.1",
+    "pump": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voyager504/fw.git"
+  },
+  "author": "Luis Aguilar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voyager504/fw/issues"
+  },
+  "homepage": "https://github.com/voyager504/fw#readme",
+  "dependencies": {}
+}

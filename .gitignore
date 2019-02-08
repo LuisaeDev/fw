@@ -1,0 +1,8 @@
+/dist
+/dev
+/vendor
+/node_modules
+/bower_components
+/package-lock.json
+/composer.lock
+/desktop.ini

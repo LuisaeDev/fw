@@ -1,0 +1,158 @@
+body.popup--no-scroll
+	overflow hidden
+
+.popup-structure
+	display none
+	left 0
+	position fixed
+	top 0
+	z-index 2000
+
+.popup-structure--show
+	display block
+
+.popup-structure__layer
+	bottom 0
+	left 0
+	outline 0
+	overflow-scrolling touch
+	padding 20px
+	position fixed
+	right 0
+	top 0
+
+.popup-structure__container
+	min-height 100%
+	position relative
+	width 100%
+
+.popup-structure__layer--back
+	opacity 0.3
+	overflow hidden
+	z-index 1
+
+	.popup:not(.popup--max)
+		left 50%
+		position absolute
+		transform translateX(-50%)
+
+	.popup__close
+		display none
+
+.popup-structure__layer--front
+	overflow-x hidden
+	overflow-y auto
+	z-index 3
+
+.popup-structure__overlay
+	background-color rgba(white, 0.8)
+	bottom 0
+	display none
+	left 0
+	overflow hidden
+	position fixed
+	right 0
+	top 0
+	z-index 2
+
+.popup-structure__overlay--show
+	display block
+
+.popup-structure__loading
+	display none
+	left 50%
+	position absolute
+	text-align center
+	top 50%
+	transform translateX(-50%) translateY(-50%)
+
+	svg
+		animation be-spinner-rotation 1.4s linear infinite
+		stroke colorRed
+
+	.circle
+		animation be-spinner-turn 1.4s ease-in-out infinite
+		stroke-dasharray 187
+		stroke-dashoffset 0
+		transform-origin center
+
+.popup-structure__loading--show
+	display block
+
+// Estilos generales de los popups
+.popup
+	display none
+	margin 0 auto
+	max-width 100%
+	outline 0
+	position relative
+	transition top 0.2s ease
+	width 100%
+
+.popup--show
+	display block
+
+.popup--xs
+	max-width 350px !important
+
+.popup--sm
+	max-width 500px !important
+
+.popup--md
+	max-width 800px !important
+
+.popup--lg
+	max-width 1100px !important
+
+.popup--max
+	left 0
+	top 0
+	width 100% !important
+
+.popup--auto
+	left 50%
+	transform translateX(-50%)
+	width auto !important
+
+	&.popup--show
+		display inline-block !important
+
+// Tema default para los popups
+.popup--default
+
+	.popup__window
+		border-radius 3px
+		box-shadow 0px 0.25em 1em 0px rgba(0,0,0,0.2)
+		overflow hidden
+
+	.popup__title-bar
+		background-color colorLightGrey
+		border-bottom 2px solid colorGrey
+		font-size 14px
+		font-weight bold
+		margin 0
+		padding 1em
+
+	.popup__body
+		background-color white
+		overflow hidden
+		padding 1em
+
+	.popup__close
+		background-color rgba(colorRed, 0.2)
+		border 2px solid colorRed
+		border-radius 50%
+		color colorRed
+		font-size 20px
+		height 32px
+		line-height 28px
+		position absolute
+		right -16px
+		text-align center
+		top -16px
+		transition all 0.2s ease
+		width 32px
+
+		&:hover
+			background-color colorRed
+			color white

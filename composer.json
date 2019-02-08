@@ -1,0 +1,16 @@
+{
+	"config": {
+		"vendor-dir": "vendor"
+	},
+	"name": "fw",
+	"authors": [
+		{
+			"name": "Luis Aguilar",
+			"email": "hola@luisaguilar.me"
+		}
+	],
+	"require": {
+		"predis/predis": "^1.1",
+		"twig/twig": "^2.4"
+	}
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Dump</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1 user-scalable=no">
+		<style>
+			@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+			html {
+				font-family: 'Open Sans', sans-serif;
+				line-height: 1.5;
+				-ms-text-size-adjust: 100%;
+				-webkit-text-size-adjust: 100%;
+			}
+			body {
+				margin: 0;
+				background-color: #EEE;
+				padding: 8px 12px;
+			}
+			h1 {
+				color: red;
+			}
+			table {
+				background: white;
+				width: 100%;
+				max-width: 800px;
+			}
+			thead td {
+				background-color: #7b8897;
+				color: white;
+			}
+			table td {
+				padding: 16px;
+				border-bottom: 2px solid #EEE;
+				vertical-align: top;
+			}
+			.key {
+				font-weight: bold;
+			}
+			.value {
+				color: #888;
+			}
+			.trace {
+				background-color: #F7F7F7;
+			}
+		</style>
+
+	</head>
+	<body>
+		<table cellspacing="0">
+			<thead>
+				<tr>
+					<td colspan="2"><strong>Dump</strong></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><span class="key">File:</span></td>
+					<td><span class="value">{{ file }}</span></td>
+				</tr>
+				<tr>
+					<td><span class="key">Line:</span></td>
+					<td><span class="value">{{ line }}</span></td>
+				</tr>
+				<tr>
+					<td class="trace"><span class="key">Value type:</span></td>
+					<td class="trace"><span class="value">{{ type }}</span></td>
+				</tr>
+				<tr>
+					<td class="trace" colspan="2"><span class="key">Value</span><pre>{{ value }}</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

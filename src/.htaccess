@@ -1,0 +1,16 @@
+RewriteEngine On
+IndexIgnore *
+<Files *.php>
+	Order Deny,Allow
+	Deny from all
+</Files>
+<Files index.php>
+	Order Allow,Deny
+	Allow from all
+</Files>
+<Files "*.twig">
+	Order Allow,Deny
+	Deny from all
+</Files>
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?req=$1 [QSA,L]

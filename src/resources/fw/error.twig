@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Runtime error</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1 user-scalable=no">
+		<style>
+			@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+			html {
+				font-family: 'Open Sans', sans-serif;
+				line-height: 1.5;
+				-ms-text-size-adjust: 100%;
+				-webkit-text-size-adjust: 100%;
+			}
+			body {
+				margin: 0;
+				background-color: #EEE;
+				padding: 8px 12px;
+			}
+			h1 {
+				color: red;
+			}
+			table {
+				background: white;
+				width: 100%;
+				max-width: 800px;
+			}
+			thead td {
+				background-color: #fc6161;
+				color: white;
+			}
+			table td {
+				padding: 16px;
+				border-bottom: 2px solid #EEE;
+				vertical-align: top;
+			}
+			.key {
+				font-weight: bold;
+			}
+			.value {
+				color: #888;
+			}
+			.trace {
+				background-color: #F7F7F7;
+			}
+		</style>
+
+	</head>
+	<body>
+		<table cellspacing="0">
+			<thead>
+				<tr>
+					<td colspan="2"><strong>Runtime error!</strong></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><span class="key">Request route:</span></td>
+					<td><span class="value">{{ error['request.route'] }}</span></td>
+				</tr>
+				<tr>
+					<td><span class="key">Date:</span></td>
+					<td><span class="value">{{ error.timestamp|date("Y/M/d H:m:s") }}</span></td>
+				</tr>
+				<tr>
+					<td><span class="key">Code:</span></td>
+					<td><span class="value">{{ error.code }}</span></td>
+				</tr>
+				<tr>
+					<td><span class="key">Message:</span></td>
+					<td><span class="value">{{ error.message }}</span></td>
+				</tr>
+				<tr>
+					<td><span class="key">File:</span></td>
+					<td><span class="value">{{ error.file }}</span></td>
+				</tr>
+				<tr>
+					<td><span class="key">Line:</span></td>
+					<td><span class="value">{{ error.line }}</span></td>
+				</tr>
+				<tr>
+					<td><span class="key">Triggered:</span></td>
+					<td><span class="value">{{ error.triggered }}</span></td>
+				</tr>
+				<tr>
+					<td><span class="key">Catched:</span></td>
+					<td><span class="value">{{ error.catched }}</span></td>
+				</tr>
+				<tr>
+					<td class="trace" colspan="2"><span class="key">Trace:</span><pre>{{ error.trace }}</pre></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
