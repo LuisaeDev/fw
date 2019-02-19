@@ -1,0 +1,11 @@
+<h4 class="text-center">{{ message }}</h4>
+<div class="text-center mt-3">
+	{% for button in buttons %}
+		{% if button.class %}
+			{% set class = button.class %}
+		{% else %}
+			{% set class = "btn-secondary" %}
+		{% endif %}
+		<button class="btn btn-hspace btn-lg {{ class }}" data-value="{{ button.value }}">{{ button.label }}</button>
+	{% endfor %}
+</div>

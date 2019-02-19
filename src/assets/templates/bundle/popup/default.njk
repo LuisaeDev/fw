@@ -1,0 +1,9 @@
+<div class="popup__window">
+	{% if title %}
+		<h6 class="popup__title-bar">{{ title }}</h6>
+	{% endif %}
+	<div class="popup__body">{{ content|safe }}</div>
+</div>
+{% if closeBtn != false %}
+	<button class="js-popup-close popup__close mdi mdi-close"></button>
+{% endif %}
