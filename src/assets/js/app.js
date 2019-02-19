@@ -1,8 +1,8 @@
 define('app', [ 'fw', 'fw/storage', 'mods/auth/handler', 'fw/helpers' ], function(fw, storage, authHandler, helpers) {
 
 	// Se establecen las URL's para el handler de autenticación
-	authHandler.loginURL = fw.baseUrl('/login');
-	authHandler.logoutURL = fw.baseUrl('/logout');
+	authHandler.loginURL = fw.baseUrl('login');
+	authHandler.logoutURL = fw.baseUrl('logout');
 
 	// Evento al realizar un login
 	authHandler.on('login-response', function(resp) {
