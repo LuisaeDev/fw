@@ -39,13 +39,13 @@ class MarkCounter {
 	/**
 	 * Agrega una marca.
 	 *
-	 * @param string $keyname Nombre clave de la marca
-	 * @param mixed  $value   Valor de la marca
-	 * @param mixed  $expire  Intérvalo de tiempo a expirar para la marca
+	 * @param string     $keyname Nombre clave de la marca
+	 * @param mixed|null $value   Valor de la marca
+	 * @param mixed|null $expire  Intérvalo de tiempo a expirar para la marca
 	 *
 	 * @return void
 	 */
-	public function add($keyname, $value, $expire = null) {
+	public function add($keyname, $value = null, $expire = null) {
 
         // Determina el tiempo en expiración en UTC
         if ($expire) {
@@ -78,10 +78,10 @@ class MarkCounter {
         ), 'value, created', 'created DESC');
 
         // Retorna el marcador
-		if ($marker === null) {
-			return null;
-		} else {
+		if ($marker) {
 			return $marker;
+		} else {
+			return null;
 		}
 	}
 
